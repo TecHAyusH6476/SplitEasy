@@ -1,0 +1,22 @@
+services:
+  # Backend API service
+  backend:
+    build: .
+    container_name: spliteasy-backend
+    restart: unless-stopped
+    environment:
+      NODE_ENV: dev
+      PORT: 3001
+      MONGODB_URI: ${MONGODB_URI}
+      JWT_SECRET: ${JWT_SECRET}
+      LOG_LEVEL: ${LOG_LEVEL:-info}
+    ports:
+      - "3001:3001"
+    volumes:
+      - ./logs:/app/logs
+    networks:
+      - spliteasy-network
+
+networks:
+  spliteasy-network:
+    driver: bridge 
