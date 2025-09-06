@@ -66,7 +66,6 @@ export const GroupExpenseChart = () => {
                 await getUserGroupsService(profile, setAlert, setAlertMessage)
             setGroupExp(group_exp.data.groups)
             setLoading(false)
-            console.log(group_exp.data.groups)
         }
         getGroupExpense()
 

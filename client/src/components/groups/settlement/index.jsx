@@ -68,7 +68,7 @@ export const GroupSettlements = ({ currencyType }) => {
                       >
                         <Iconify icon="icon-park-twotone:doc-success"  sx={{color: (theme) => theme.palette['success'].dark, fontSize: 100}} />
                         <Typography fontSize={18} textAlign={'center'} my={1}>
-                        No Settlement requiered !
+                        No Settlement required !
                         </Typography>
                         </Grid>
                          : <UserBalanceChart/>}

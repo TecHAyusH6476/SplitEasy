@@ -10,6 +10,7 @@ services:
       MONGODB_URI: ${MONGODB_URI}
       JWT_SECRET: ${JWT_SECRET}
       LOG_LEVEL: ${LOG_LEVEL:-info}
+      CORS_ORIGINS: ${CORS_ORIGINS}
     ports:
       - "3001:3001"
     volumes:

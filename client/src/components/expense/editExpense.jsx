@@ -80,11 +80,15 @@ export default function EditExpense() {
         const response_exp = await getExpDetailsService(expenseIdJson, setAlert, setAlertMessage)
         setExpenseDetails(response_exp?.data?.expense)
         const exp = response_exp?.data?.expense
-        console.log(exp)
         const groupIdJson = {
             id: response_exp?.data?.expense?.groupId
         }
         const response_group = await getGroupDetailsService(groupIdJson, setAlert, setAlertMessage)
+        
+        // Set group members first
+        setGroupMembers(response_group?.data?.group?.groupMembers)
+        
+        // Then set form values after group members are loaded
         formik.values.expenseName = exp?.expenseName
         formik.values.expenseDescription = exp?.expenseDescription
         formik.values.expenseOwner = exp?.expenseOwner
@@ -95,7 +99,7 @@ export default function EditExpense() {
         formik.values.groupId = exp?.groupId
         formik.values.expenseType = exp?.expenseType
         formik.values.id = exp?._id
-        setGroupMembers(response_group?.data?.group?.groupMembers)
+        
         setLoading(false)
     }
     getExpenseDetails()
