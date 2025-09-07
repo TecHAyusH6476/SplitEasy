@@ -1,0 +1,13 @@
+node_modules
+npm-debug.log
+.git
+.gitignore
+README.md
+.nyc_output
+coverage
+.DS_Store
+*.log
+client/
+Screenshots/
+MITLICENCE.md
+Procfile 

@@ -395,7 +395,6 @@ exports.makeFavourite = async(req, res) => {
         const user = await model.User.findOne({
             emailId: req.body.user
         })
-        console.log(user)
         if(!user){
             var err = new Error("User not presnt in the database")
             err.status = 400
@@ -441,7 +440,6 @@ exports.removeFavourite = async(req, res) => {
         const user = await model.User.findOne({
             emailId: req.body.user
         })
-        console.log(user)
         if(!user){
             var err = new Error("User not presnt in the database")
             err.status = 400
