@@ -35,7 +35,7 @@ steps:
       - '--set-env-vars'
       - 'NODE_ENV=production'
       - '--set-secrets'
-      - 'MONGODB_URI=mongodb-uri:latest,JWT_SECRET=jwt-secret:latest,CORS_ORIGINS=cors-origins:latest'
+      - 'MONGODB_URI=mongodb-uri:latest,ACCESS_TOKEN_SECRET=jwt-secret:latest,CORS_ORIGINS=cors-origins:latest'
 
 # Store images in Google Container Registry
 images:
