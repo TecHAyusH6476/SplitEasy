@@ -1,13 +1,66 @@
+# Dependencies
 node_modules
 npm-debug.log
+yarn-error.log
+
+# Git
 .git
 .gitignore
+.gitattributes
+
+# Documentation
 README.md
+MITLICENCE.md
+*.md
+
+# Testing
 .nyc_output
 coverage
+test/
+tests/
+__tests__/
+
+# IDE and OS
 .DS_Store
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
 *.log
+logs/
+
+# Environment files
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# Client-side code (not needed for backend)
 client/
+public/
+
+# Screenshots and assets
 Screenshots/
-MITLICENCE.md
-Procfile 
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.svg
+
+# Deployment files
+Procfile
+docker-compose.yml
+docker-compose.*.yml
+.dockerignore
+
+# Cloud Build
+cloudbuild.yaml
+deploy-cloud-run.sh
+
+# Temporary files
+tmp/
+temp/ 
